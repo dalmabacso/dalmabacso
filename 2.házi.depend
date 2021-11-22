@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1637597817 source:c:\users\dalma\downloads\2.házi\main.cpp
+	<iostream>
+	<fstream>
+
