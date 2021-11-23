@@ -2,20 +2,22 @@
 
 using namespace std;
 
-int maximum (int v[],int n){
-  int m=v[0];
-  int main =v[0];
-  for (int i=1;i<n;i++){
-    if (m<v[i]){m=v[i];}
-  }
-  return 0;
+int lnko(int a,int b){
+ while (a!=b){
+  if(a>b){
+    a=a-b;
 
+  }else{
+  b=b-a;
+  return o;
   }
+ int main (){
+ int a,b;
+ cout << "a=";
+ cin >>a;
+ cout <<"b=";
+ cin >>b;
+ cout << lnko (a,b);
 
-    int main ()
-    {
-    int v[10]={1,2,5,6,3,9,77,45,7,0};
-    cout << maximum (v,10);
     return 0;
-
-    }
+}
