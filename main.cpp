@@ -1,104 +1,49 @@
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std;
-bool prim(int a){
-for (int i=2;i<a/2+1;i++){
-if (a%1==0){
-  return false;
+
+void lenullaz (int a[],int n){
+for (int i=0;i<n;i++){
+    a[i]=rand()%100;
 }
 }
-return true;
+void feltolt (int a[],int n){
+for (int i=0;i<n;i++){
+  a[i]=rand ()%100;
 }
-bool pallindrom(int a){
-int d =0,x=a;
-while (x>0){
-  int c=x%10;
-  d=d*10+c;
-  x=x/10;
-}
-//return a ==d;
-if(a==d){
-    return true;
-
-} else{
- return false;
-
 }
 
-
-}
-  int lnko(int a,int b)
-  {
-
-
-  while (a!=b){
-    if (a>b){
-       a-=b;
-
-    }
-    else{
-      b-=a;
-    }
-}
-    return a;
-
-
-    }
-    int main()
-
-
-
-   while(a>0)
-      {
-    cout <<"Mit szeretnél csinálni?"<<endl<<endl;
-    cout <<"1. Megvizsgálni, hogy egy szám prím-e"<<endl;
-    cout <<"2. Megvizsgálni, hogy egy szám pallindróm-e"<<endl;
-    cout <<"3. Megkeresni két szám legnagyobb közös osztóját"<<endl;
-    cout <<"0. Kilépni"<<endl;
-    cin >>a;
-    if (a==1)
-    {
-      int x;
-      cout <<"a szam";
-      cin >>x;
-      if (prim(x))
-    {
-      cout <<"a szam prim"<<endl;
-
+  void rendez (int a[],int n){
+for (int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++){
+      if (a[i]>a[j]){
+        swap (a[i],a[j]);
       }
-      else
-        {
-        cout <<" a szam nem prim"<<endl;
+    }
+      }
+    }
 
-        }
+   void kiir (int a[],int n){
+   for (int i=0;i<n;i++){
+      cout << a[i]<< " ";
+   }
+   cout <<endl;
 
-}
-if(a==2)
-{
-  int x;
-  cout <<"a szam";
-  cin >>x;
-  if(pallindrom(x))
-{
-  cout <<"a szam pallindrom "<<endl;
+   }
+   int main ()
+   {
 
-  }
-else
-{
-  cout <<"a szam nem pallindrom"<<endl;
-
-}
-}
- if(a==3) {
-  int x,y;
-  cout <<"elso szam";
-  cin >>x;
-  cout <<"masodik szam";
-  cin >>y;
-  cout <<lnko (x,y);
-
- }
-return 0;
-}
+     int a[1000];
+     int n=10;
+     kiir(a,n);
+     lenullaz (a,n);
+     kiir(a,n);
+     feltolt(a,n);
+     kiir(a,n);
+     rendez (a,n);
+     kiir (a,n);
+     return 0;
+     }
 
 
