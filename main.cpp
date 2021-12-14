@@ -1,49 +1,34 @@
 #include <iostream>
-#include <stdlib.h>
 
 using namespace std;
 
-void lenullaz (int a[],int n){
-for (int i=0;i<n;i++){
-    a[i]=rand()%100;
-}
-}
-void feltolt (int a[],int n){
-for (int i=0;i<n;i++){
-  a[i]=rand ()%100;
-}
-}
+int a ,b;
+int lnko(){//(int &a,int &b{
+              int a1=a,b1=b;
+      while(a!=b){
+                if (a>b){
+                a-=b;
+              }else{
+              b-=a;
+              }
+              }
+              int lnko =a;
+              a=a1;
+              b=b1;
+              return lnko;
 
-  void rendez (int a[],int n){
-for (int i=0;i<n;i++){
-    for(int j=i+1;j<n;j++){
-      if (a[i]>a[j]){
-        swap (a[i],a[j]);
+              }
+      int lkkt (){ //(int &a,int &b){
+      return a *b/lnko();//(a,b);
       }
-    }
-      }
-    }
+      int main()
+      {
+       a=4;
+       b=6;
+       cout << lkkt()<<endl;
+       cout << lnko ()<<endl;
+       return 0;
 
-   void kiir (int a[],int n){
-   for (int i=0;i<n;i++){
-      cout << a[i]<< " ";
-   }
-   cout <<endl;
 
-   }
-   int main ()
-   {
-
-     int a[1000];
-     int n=10;
-     kiir(a,n);
-     lenullaz (a,n);
-     kiir(a,n);
-     feltolt(a,n);
-     kiir(a,n);
-     rendez (a,n);
-     kiir (a,n);
-     return 0;
-     }
-
+       }
 
