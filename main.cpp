@@ -2,33 +2,14 @@
 
 using namespace std;
 
-int a ,b;
-int lnko(){//(int &a,int &b{
-              int a1=a,b1=b;
-      while(a!=b){
-                if (a>b){
-                a-=b;
-              }else{
-              b-=a;
-              }
-              }
-              int lnko =a;
-              a=a1;
-              b=b1;
-              return lnko;
+int hatvany(int n,int x){
+if (n==1){return x;}
+return x*hatvany(n-1,x);
 
-              }
-      int lkkt (){ //(int &a,int &b){
-      return a *b/lnko();//(a,b);
-      }
-      int main()
-      {
-       a=4;
-       b=6;
-       cout << lkkt()<<endl;
-       cout << lnko ()<<endl;
-       return 0;
+}
+int main ()
+{
+  cout << hatvany (10,2)<<endl;
+  return 0;
 
-
-       }
-
+}
