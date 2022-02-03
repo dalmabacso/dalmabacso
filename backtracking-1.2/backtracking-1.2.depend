@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1643873629 source:d:\bacso dalma\backtracking-1.2\main.cpp
+	<math.h>
+	<time.h>
+	<iostream>
+
