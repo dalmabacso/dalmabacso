@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1646897192 source:d:\bacso dalma\grafok-1,elso feladat\main.cpp
+	<iostream>
+	<fstream>
+
