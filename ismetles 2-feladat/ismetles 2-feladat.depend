@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1649309139 source:c:\bacso dalma\ismetles 2-feladat\main.cpp
+	<iostream>
+	<fstream>
+
