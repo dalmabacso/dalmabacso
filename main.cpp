@@ -1,26 +1,49 @@
 #include <iostream>
 
 using namespace std;
-void secventa (int&n){
-int ujszam=0,szorzo=1;
-while(n>0)
-{
-int szj=n%10;
-if(n%100==22){
-  szorzo=szorzo%10;
 
-}else{
-ujszam=szj*szorzo+ujszam;
-szorzo=szorzo*10;
-
-}
-n/=10;
-}
-n=ujszam;
-}
 int main()
 {
-  int n;
+  int i,j,m,n,s=0,a[100][100];
+  cout<<"n=";
+  cin>>n;
+  cout<<"n=";
+  cin >>n;
+  for(i=1;i<=m;i++){
+    for(j=1;j<=n;j++){
+      cout<<"a["<<i<<"]["<<j<<"]=";
+      cin >>a[i][j];
+
+    }
+  }
+  for(i=0;i<=m+1;i++){
+    a[i][0]=11;
+    a[i][n+1]=11;
+
+  }
+  for(j=0;j<=n+1;j++){
+  a[0][j]=11;
+    a[m+1][j]=11;
+  }
+  for(i=1;i<=m;i++){
+    for(j=1;j<=n;j++){
+      int min=a[i-1][j];
+      if(a[i+1][j]<min) min=a[i+1][j];
+      if(a[i][j-1]<min) min=a[i][j-1];
+      if(a[i][j+1]<min) min=a[i][j+1];
+      if(a[i][j]<min)
+      s=s+(min-a[i][j]);
+    }
+  }
+  cout<<s;
+  return 0;
 }
+
+
+
+
+
+
+
     return 0;
 }
